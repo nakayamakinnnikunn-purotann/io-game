@@ -1,0 +1,352 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    display: flex;
+    background: #e4ecff;
+    justify-content: center;
+}
+
+/********************* Help & Chat Menu to popup *********************/
+#help{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 30px;
+    font-weight: bold;
+}
+#chaticon{
+    display: none;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.bxs-help-circle, .bxs-message-detail{
+    text-decoration: none;
+    color: black;
+}
+.bxs-help-circle:hover, .bxs-message-detail:hover{
+    color: #4070F4;
+    cursor: pointer;
+}
+
+#git_button{
+    text-decoration: none;
+    color: black;
+}
+#git_button i{
+    font-size: 30px;  
+    vertical-align: middle;
+}
+#git_button:hover i, #git_button:hover b{
+    color: grey;
+}
+
+
+/********************* Popup Menues *********************/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+  
+.popup {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: 2% auto;
+    padding: 40px;
+    background: white;
+    width: 70%;
+    border-radius: 20px;
+}
+.popup .close {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.popup .close:hover {
+    color: red;
+}
+
+.content{
+    max-height: 100%;
+    overflow: auto;
+}
+.content h2{
+    padding-bottom: 5px;
+}
+.content li{
+    padding: 0 10px 10px 10px;  
+}
+.content b{
+    font-size: 15px;
+}
+.content p{
+    padding-bottom: 10px;
+}
+
+#built-by{
+    color: #4070F4;
+    text-decoration: none;
+}
+#built-by:hover{
+    color: grey;
+}
+
+
+/********************* Title & Join page *********************/
+#titlepage, #joinpage{
+    display: none;
+    margin: 100px;
+    padding: 27px;
+    background:  white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+}
+#titlecontent, #joincontent{
+    text-align: center;
+}
+#inputPlayerName, #inputGameID{
+    margin-bottom: 5px;
+    width: 130px;
+    height: 30px;
+}
+
+
+/********************* Buttons *********************/
+.btn, button{
+    height: 30px;
+    background:#4070F4;
+    border-radius: 5px;
+    outline: none; 
+    border: none;
+    text-align: center;
+    color: white;
+}
+
+.btn{
+    margin-left: 3px;
+    width: 20%;
+}
+
+#btnjoin, #btnstart, #btngame1, #btngame2, #btngame3, #endgame1{
+    margin: 5px;
+    width: 130px;
+}
+
+
+.btn:hover, button:hover{
+    background: gray; 
+    cursor: pointer;
+}
+#btncolor{
+    margin: 5px;
+    height: 34px;
+    width: 134px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 25px;
+}
+#btncolor:hover{
+    border-color: black;
+    cursor: pointer;
+}
+
+/********************* Chat, choice, game & score page *********************/
+#chatpage, #choicepage, #scorepage, #game1page {
+    display: none;
+    margin: 35px 0;
+    height: 450px;
+    background:  white;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#game2page, #game3page{
+    display: none;
+    text-align: center;
+}
+
+/* Chat and score page content */
+#chatpage, #scorepage{
+    width: 275px;
+}
+#chattext, #scoretext{
+    margin: 3px auto 9px;
+    width: 90%;
+    background: lightgray;
+    overflow: auto;
+}
+#chattext{
+    height: calc(69% + 60px);
+}
+
+#scoretext{
+    height: calc(83% + 30px);
+}
+#gameidtext{
+    padding-top: 4px;
+    height: 30px;
+    overflow: hidden;
+}
+#scorepage h3{
+    padding-top: 4px;
+}
+#chatCell {
+    margin: 2px 0;
+    padding: 4px 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Choice Page */
+#choicepage{
+    margin: 35px 3%;
+    width: 275px; 
+}
+#choicepage h3{
+    padding: 4px 0 50px;
+    text-decoration: underline;
+}
+#choicepage h4{
+    padding: 0 10px;
+}
+#btngame1, #btngame2, #btngame3{
+    margin-top: 50px;
+}
+
+
+/********************* Game Contents *********************/
+/* Game1 page content */
+#game1page, #game2page, #game3page{
+    margin: 35px 3%;
+    width: 450px;
+    
+}
+#gametable{
+    display: flex;
+    margin: 15px 0 20px;
+    justify-content: center;
+}
+td{
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+}
+td:hover{
+    cursor: pointer;
+}
+
+/* Game2 page content */
+#game2prompt{
+    padding: 10px;
+    color: white;
+    background:  black;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+#btngame2over, #btnreveal, #btnnext{
+    margin: 5px;
+    width: 75px;
+}
+#btnreveal{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+#game2text{
+    display: none;
+}
+
+#game2Cell {
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    background: white;
+    color: black;
+}
+
+.bxs-check-circle{
+    margin-top: -3.65px;
+    margin-right: -3px;
+    float: right;
+    font-size: 30px;
+    color: #4070F4;
+}
+
+.bxs-check-circle:hover{
+    cursor: pointer;
+    color: gray;
+}
+
+/* Game3 page content */
+#btngame3over, #btnhearts, #btnskulls, #btng3next{
+    margin: 5px 5px 15px;
+    width: 75px;
+}
+#btnhearts, #btnskulls{
+    font-size: 25px;
+    vertical-align: top;
+}
+.bxs-heart{
+    color: #ff4e4e;
+}
+
+.game3Cell, #game3Cell2{
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    background: white;
+    color: black;
+}
+
+.game3Cell:hover{
+    cursor: pointer;
+}
+
+/********************* Scrollbar Effects *********************/
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkgrey;
+} 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}
